@@ -11,7 +11,7 @@ import koneksi.koneksi;
 
 /**
  *
- * @author sheilajavana
+ * 
  */
 public class Pelanggan extends javax.swing.JFrame {
     private Connection conn = new koneksi().connect();
@@ -41,7 +41,7 @@ public class Pelanggan extends javax.swing.JFrame {
             String cariitem = txtcari.getText();
             
             try {
-                String sql = "Select * FROM pelanggan where id like '%"+cariitem+"%' or nmplgn like '%"+cariitem+"%' order by id asc";
+                String sql = "Select * FROM pelanggan where id like '%"+cariitem+"%' or nmplg like '%"+cariitem+"%' order by id asc";
                 Statement stat = conn.createStatement();
                 ResultSet hasil = stat.executeQuery(sql);
                 while (hasil.next()){
@@ -376,7 +376,7 @@ public class Pelanggan extends javax.swing.JFrame {
             jenis = "Perempuan";
         }
         try{
-            String sql = "update pelanggan set nmplgn=?,jenis=?,telepon=?,alamat=? where id='"+txtid.getText()+"'";
+            String sql = "update pelanggan set nmplg=?,jenis=?,telepon=?,alamat=? where id='"+txtid.getText()+"'";
             PreparedStatement stat = conn.prepareStatement(sql);
             stat.setString(1, txtnm.getText());
             stat.setString(2, jenis);

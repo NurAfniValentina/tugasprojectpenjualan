@@ -6,7 +6,7 @@ package aplikasi_penjualan;
 
 /**
  *
- * @author sheilajavana
+ * @author 
  */
 public class Aplikasi_Penjualan {
 

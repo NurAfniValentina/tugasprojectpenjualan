@@ -7,7 +7,6 @@ import java.sql.*;
 
 /**
  *
- * @author sheilajavana
  */
 public class koneksi {
     private Connection koneksi;
