@@ -40,7 +40,7 @@ public class kasir extends javax.swing.JFrame{
             String cariitem = txtcari.getText();
             
             try {
-                String sql = "Select * FROM pelanggan where nama like '%"+cariitem+"%' or nmplg like '%"+cariitem+"%' order by id asc";
+                String sql = "Select * FROM kasir where nama like '%"+cariitem+"%' or nmplg like '%"+cariitem+"%' order by id asc";
                 Statement stat = conn.createStatement();
                 ResultSet hasil = stat.executeQuery(sql);
                 while (hasil.next()){
@@ -348,7 +348,7 @@ public class kasir extends javax.swing.JFrame{
     private void bhapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bhapusActionPerformed
         int ok = JOptionPane.showConfirmDialog(null,"hapus","konfirmasi dialog",JOptionPane.YES_NO_OPTION);
         if (ok==0){
-            String sql = "delete from pelanggan where id = '"+txtid.getText()+"'";
+            String sql = "delete from kasir where id = '"+txtid.getText()+"'";
             try{
                 PreparedStatement stat = conn.prepareStatement(sql);
                 stat.executeUpdate();
